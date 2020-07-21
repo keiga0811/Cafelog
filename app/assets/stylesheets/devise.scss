@@ -1,0 +1,51 @@
+header {
+	background-color: #D2B48C;
+}
+
+.navi {
+	width: 1024px;
+	margin: 0 auto;
+}
+
+nav {
+	float: right;
+}
+.navlist {
+	list-style: none;
+	float: left;
+	padding: 0 30px;
+	line-height: 70px;
+}
+
+a:link {
+	text-decoration: none;
+	color: #FAFAFA;
+}
+
+a:visited {
+	color: #FAFAFA;
+}
+
+a:hover {
+	color: blue;
+}
+
+.login {
+	height: 580px;
+	background-color: #ECEFF1;
+	text-align: center;
+	padding-top: 100px;
+}
+
+.signin {
+	height: 580px;
+	background-color: #ECEFF1;
+	text-align: center;
+	padding-top: 100px;
+}
+
+footer {
+	height: 60px;
+	width: 100%;
+	background-color: #D2B48C;
+}
