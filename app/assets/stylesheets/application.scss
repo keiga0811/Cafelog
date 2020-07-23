@@ -16,14 +16,102 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
- * {
+* {
  	margin: 0;
  	padding: 0;
  	box-sizing: border-box;
  }
 
- .clearfix::after {
+.clearfix::after {
    content: "";
    display: block;
    clear: both;
  }
+
+header {
+	background-color: #D2B48C;
+}
+
+.navi {
+	width: 1024px;
+	margin: 0 auto;
+}
+
+nav {
+	float: right;
+}
+.navlist {
+	list-style: none;
+	float: left;
+	padding: 0 30px;
+	line-height: 70px;
+	font-size: 20px;
+}
+
+a:link {
+	text-decoration: none;
+	color: black;
+}
+
+a:visited {
+	color: black;
+}
+
+a:hover {
+	color: blue;
+}
+
+.topwrapper {
+	height: 650px;
+	width: 100%;
+	background-image: url("cafe.jpg");
+	background-size: cover;
+	background-position: bottom;
+}
+
+.about {
+	height: 650px;
+	width: 100%;
+	background-color: #ECEFF1;
+}
+
+.about-title {
+	padding-top: 90px;
+	font-size: 32px;
+	text-align: center;
+}
+
+.feature {
+	height: 650px;
+	width: 100%;
+}
+
+.feature-title {
+	padding-top: 90px;
+	font-size: 32px;
+	text-align: center;
+}
+
+.contact {
+	height: 300px;
+	width: 100%;
+	background-color: #ECEFF1;
+}
+
+.contact-title {
+	padding-top: 20px;
+	font-size: 32px;
+	text-align: center;
+}
+
+footer {
+	height: 30px;
+	width: 100%;
+	background-color: #D2B48C;
+}
+
+.footer-text {
+	color: white;
+	text-align: center;
+	padding-top: 5px;
+}

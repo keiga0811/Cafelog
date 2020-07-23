@@ -1,16 +1,25 @@
 <div class="container">
 	<div class="row">
-		<div class="col-lg-offset-1 col-lg-2">
-			<p>画像</p>
-		</div>
-		<div class="col-lg-6">
-			<%= form_for(@post) do |f| %>
-			<h4>タイトル</h4>
-			<%= f.text_field :title %>
-			<h4>キャプション</h4>
-			<%= f.text_area :caption %>
-			<%= f.submit '投稿' %>
-			<% end %>
-		</div>
+		<%= form_for(@post) do |f| %>
+			<div class="col-lg-offset-1 col-lg-2">
+				<p>画像</p>
+				<%= f.attachment_field :image %>
+			</div>
+			<div class="col-lg-offset-4 col-lg-4">
+				<table>
+					<tbody>
+						<tr>
+							<td>タイトル</td>
+							<td><%= f.text_field :title %></td>
+						</tr>
+						<tr>
+							<td>キャプション</td>
+							<td><%= f.text_area :caption %></td>
+						</tr>
+					</tbody>
+				</table>
+				<%= f.submit '投稿' %>
+			</div>
+		<% end %>
 	</div>
 </div>

@@ -1,0 +1,18 @@
+<div class="col-lg-3">
+	<h2>User info</h2>
+	<%= attachment_image_tag user, :profile_image, :size => '250x250', fallback: "noimage.png" %>
+	<table class="table">
+		<tbody>
+			<tr>
+				<td>name</td>
+				<td><%= user.name %></td>
+			</tr>
+			<tr>
+				<td>introduction</td>
+				<td><%= user.introduction %></td>
+			</tr>
+		</tbody>
+	</table>
+	<%= link_to "ユーザーの投稿ページ", user_path(user.id) %><br>
+	<%= link_to "ユーザー情報編集", edit_user_path(user.id) %>
+</div>

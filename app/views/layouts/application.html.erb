@@ -10,6 +10,27 @@
   </head>
 
   <body>
+
+    <% if user_signed_in? %>
+    <header>
+      <div class="navi clearfix">
+        <%= link_to "Cafelog", user_path(current_user.id) %>
+        <nav>
+          <ul>
+            <li class="navlist"><%= link_to "新規投稿", new_post_image_path %></li>
+            <li class="navlist"><%= link_to "投稿一覧", post_images_path %></li>
+            <li class="navlist"><%= link_to "ユーザー", users_path %></li>
+            <li class="navlist"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <% end %>
+
     <%= yield %>
+
+    <footer>
+      <p class="footer-text">©︎Keiga Shirane</p>
+    </footer>
   </body>
 </html>

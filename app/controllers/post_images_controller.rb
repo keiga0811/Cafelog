@@ -10,10 +10,12 @@ class PostImagesController < ApplicationController
   end
 
   def index
+    @user = current_user
   	@posts = PostImage.all
   end
 
   def show
+    @post = Post.find(params[:id])
   end
 
   def edit
@@ -21,6 +23,6 @@ class PostImagesController < ApplicationController
 
   private
   def post_image_params
-  	params.require(:post_image).permit(:title, :caption)
+  	params.require(:post_image).permit(:title, :caption, :image)
   end
 end
