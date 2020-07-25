@@ -13,6 +13,6 @@
 			</tr>
 		</tbody>
 	</table>
-	<%= link_to "ユーザーの投稿ページ", user_path(user.id) %><br>
-	<%= link_to "ユーザー情報編集", edit_user_path(user.id) %>
+	<%= link_to "#{user.name}の投稿一覧", user_path(user.id), class:"btn btn-info" %><br>
+	<%= link_to "ユーザー情報編集", edit_user_path(user.id), class:"btn btn-warning" %>
 </div>

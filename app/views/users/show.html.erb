@@ -1,5 +1,14 @@
 <div class="container">
 	<div class="row">
+
 		<%= render "users/userinfo", user: @user %>
+
+		<div class="col-lg-9">
+			<h2>User's posts</h2>
+			<% @posts.each do |post| %>
+			<%= attachment_image_tag post, :image, format: 'jpeg', size: "100x100" %>
+			<%= link_to post.title, post_image_path(post.id) %>
+			<% end %>
+		</div>
 	</div>
 </div>

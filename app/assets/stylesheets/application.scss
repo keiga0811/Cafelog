@@ -32,6 +32,15 @@ header {
 	background-color: #D2B48C;
 }
 
+.logo {
+	font-size: 40px;
+	font-family: 'Raleway', sans-serif;
+}
+
+i {
+	font-size: 40px;
+}
+
 .navi {
 	width: 1024px;
 	margin: 0 auto;
@@ -69,6 +78,23 @@ a:hover {
 	background-position: bottom;
 }
 
+.title {
+	text-align: center;
+	color: #FAFAFA;
+	margin: 0 auto;
+	padding-top: 100px;
+}
+
+.top-title {
+	font-size: 64px;
+	margin-bottom: 10px;
+	font-family: 'Raleway', sans-serif;
+}
+
+.c {
+	color: #800000;
+}
+
 .about {
 	height: 650px;
 	width: 100%;
@@ -76,7 +102,7 @@ a:hover {
 }
 
 .about-title {
-	padding-top: 90px;
+	padding-top: 50px;
 	font-size: 32px;
 	text-align: center;
 }
@@ -87,7 +113,7 @@ a:hover {
 }
 
 .feature-title {
-	padding-top: 90px;
+	padding-top: 50px;
 	font-size: 32px;
 	text-align: center;
 }

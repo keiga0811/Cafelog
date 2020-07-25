@@ -7,6 +7,21 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet"><!-- fontawesome使用のため -->
+
+<!-- topページのリンクにスムーススクロールを実装　-->
+    <script>
+      $(document).on('turbolinks:load', function() {
+          $('a[href^="#"]').click(function () {
+              var speed = 500;
+              var href= $(this).attr("href");
+              var target = $(href == "#" || href == "" ? 'html' : href);
+              var position = target.offset().top;
+              $("html, body").animate({scrollTop:position}, speed, 'swing');
+              return false;
+          });
+       });
+    </script>
   </head>
 
   <body>
@@ -14,7 +29,7 @@
     <% if user_signed_in? %>
     <header>
       <div class="navi clearfix">
-        <%= link_to "Cafelog", user_path(current_user.id) %>
+        <%= link_to "Cafelog", user_path(current_user.id), class: "logo" %><i class="fas fa-coffee"></i>
         <nav>
           <ul>
             <li class="navlist"><%= link_to "新規投稿", new_post_image_path %></li>
@@ -30,7 +45,7 @@
     <%= yield %>
 
     <footer>
-      <p class="footer-text">©︎Keiga Shirane</p>
+      <p class="footer-text">©︎Cafelog</p>
     </footer>
   </body>
 </html>

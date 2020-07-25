@@ -1,11 +1,11 @@
 <header>
 	<div class="navi clearfix">
-		<%= link_to "Cafelog", root_path %>
+		<%= link_to "Cafelog", root_path, class: "logo" %><i class="fas fa-coffee"></i>
 		<nav>
 			<ul>
-				<li class="navlist"><%= link_to "About", "#" %></li>
-				<li class="navlist"><%= link_to "Feature", "#" %></li>
-				<li class="navlist"><%= link_to "Contact", "#" %></li>
+				<li class="navlist"><%= link_to "About", "#1" %></li>
+				<li class="navlist"><%= link_to "Feature", "#2" %></li>
+				<li class="navlist"><%= link_to "Contact", "#3" %></li>
 				<li class="navlist"><%= link_to "Login", new_user_session_path %></li>
 			</ul>
 		</nav>
@@ -13,22 +13,29 @@
 </header><!-- /header -->
 
 <div class="topwrapper">
-	
+	<div class="title">
+	<p class="top-title"><span class="c">Cafe</span>log<i class="fas fa-coffee"></i></p>
+	</div>
 </div>
 
-<div class="about">
-	<p class="about-title"><strong>About</strong></p>
-	<p>おすすめのカフェの写真や場所を投稿し、ユーザーと共有できるサイトです。</p><br>
-	<p>場所やカフェの特性に絞って検索することも可能です。</p><br>
-	<p>ユーザー登録すると、投稿や他人の投稿にコメントができるようになります。</p>
+<div id="1">
+	<div class="about">
+		<p class="about-title"><strong>About</strong></p>
+		<p>おすすめのカフェの写真や場所を投稿し、ユーザーと共有できるサイトです。</p><br>
+		<p>いきたいカフェを検索するときや</p><br>
+		<p>いままで行ったカフェを記録したいとき</p><br>
+		<p>ユーザー同士でおすすめを共有したいときにご利用ください。</p>
+	</div>
 </div>
 
-<div class="feature">
-	<p class="feature-title"><strong>Feature</strong></p>
-	
+<div id="2">
+	<div class="feature">
+		<p class="feature-title"><strong>Feature</strong></p>
+	</div>
 </div>
 
-<div class="contact">
-	<p class="contact-title"><strong>Contact</strong></p>
-	
+<div id="3">
+	<div class="contact">
+		<p class="contact-title"><strong>Contact</strong></p>
+	</div>
 </div>

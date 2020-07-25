@@ -5,7 +5,11 @@ class PostImagesController < ApplicationController
 
   def create
   	post = PostImage.new(post_image_params)
+    post.user_id = current_user.id
   	post.save
+    post.errors.full_messages.each do |msg|
+      p msg
+    end
   	redirect_to post_images_path
   end
 
@@ -15,14 +19,27 @@ class PostImagesController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
+    @post = PostImage.find(params[:id])
   end
 
   def edit
+    @post = PostImage.find(params[:id])
+  end
+
+  def update
+    post = PostImage.find(params[:id])
+    post.update(post_image_params)
+    redirect_to post_images_path
+  end
+
+  def destroy
+    post = PostImage.find(params[:id])
+    post.destroy
+    redirect_to post_images_path
   end
 
   private
   def post_image_params
-  	params.require(:post_image).permit(:title, :caption, :image)
+  	params.require(:post_image).permit(:user_id, :title, :caption, :image)
   end
 end
