@@ -27,7 +27,9 @@
 					</tr>
 				</tbody>
 			</table>
+			<% if @post.user_id == current_user.id %>
 			<%= link_to "投稿内容を編集する", edit_post_image_path(@post.id), class:"btn btn-success" %>
+			<% end %>
 			<div class="comment-list bt style-2" id="comments">
 			  <div class="float-wrapper">
 			    <h2 class="comment-count"><%= @post.post_comments.count %>件コメント</h2>

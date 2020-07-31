@@ -14,5 +14,7 @@
 		</tbody>
 	</table>
 	<%= link_to "#{user.name}の投稿一覧", user_path(user.id), class:"btn btn-info" %><br>
+	<% if user.id == current_user.id %>
 	<%= link_to "ユーザー情報編集", edit_user_path(user.id), class:"btn btn-warning" %>
+	<% end %>
 </div>
