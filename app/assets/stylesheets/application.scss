@@ -134,10 +134,19 @@ footer {
 	height: 30px;
 	width: 100%;
 	background-color: #D2B48C;
+	bottom: 0;
 }
 
 .footer-text {
 	color: white;
 	text-align: center;
 	padding-top: 5px;
+}
+
+.attachment {
+	margin: 0 5px 10px 0;
+}
+
+.wrapper-contents {
+	height: 610px;
 }
