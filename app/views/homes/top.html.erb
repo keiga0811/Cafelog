@@ -14,28 +14,70 @@
 
 <div class="topwrapper">
 	<div class="title">
-	<p class="top-title"><span class="c">Cafe</span>log<i class="fas fa-coffee"></i></p>
+		<p class="top-title"><span class="cafe">Cafe</span>log<i class="fas fa-coffee"></i></p>
+	</div>
+	<div class="login-button">
+		<%= link_to "ログインする", new_user_session_path, class:"btn btn-warning" %>
+		<p>登録がお済みでない方は<%= link_to "こちら", new_user_registration_path %></p>
 	</div>
 </div>
 
 <div id="1">
 	<div class="about">
 		<p class="about-title"><strong>About</strong></p>
-		<p>おすすめのカフェの写真や場所を投稿し、ユーザーと共有できるサイトです。</p><br>
-		<p>いきたいカフェを検索するときや</p><br>
-		<p>いままで行ったカフェを記録したいとき</p><br>
-		<p>ユーザー同士でおすすめを共有したいときにご利用ください。</p>
+		<div class="about-contents">
+			<h4 class="about-text">おすすめのカフェの写真や場所を投稿し、ユーザーと共有できるサイトです。<br>
+			いきたいカフェを検索するときや,訪れた場所を記録したいとき<br>
+			ユーザー同士でおすすめを共有したいときにご利用ください。</h4>
+		</div>
+		<div class="image-group clearfix">
+			<div class="img1 img"></div>
+			<div class="img2 img"></div>
+			<div class="img3 img"></div>
+		</div>
 	</div>
 </div>
 
 <div id="2">
 	<div class="feature">
 		<p class="feature-title"><strong>Feature</strong></p>
+		<div class="feature-contents">
+			<h4>投稿の共有に便利な各種機能を実装しています。</h4>
+		</div>
+		<div class="feature-group clearfix">
+			<div class="features"><i class="fas fa-user-friends"></i>
+				<h3 class="features-title">フォロー</h3>
+				<p class="text">お気に入りのユーザーをフォローすることができます。フォローしたユーザーは一覧画面で確認することができます。</p>
+			</div>
+			<div class="features"><i class="fas fa-comments"></i>
+				<h3 class="features-title">コメント/いいね</h3>
+				<p class="text">投稿に対してコメントを書くことができます。
+				お気に入りの投稿に対し「いいね」を送ることができます。</p>
+			</div>
+			<div class="features"><i class="fas fa-tag"></i>
+				<h3 class="features-title">タグ付け</h3>
+				<p class="text">投稿内容に関するタグを設定することができます。</p>
+			</div>
+		</div>
 	</div>
 </div>
 
 <div id="3">
 	<div class="contact">
 		<p class="contact-title"><strong>Contact</strong></p>
+		<div class="contact-group clearfix">
+			<div class="left-contents">
+				<h3>MAIL</h3><br>
+				<h4><%= mail_to 'keiga0811@gmail.com' %></h4>
+			</div>
+			<div class="right-contents">
+				<h3>SNS</h3><br>
+				<div class="link-icon">
+					<a class="fab fa-instagram icon" href="https://www.instagram.com/shiroi_cafe"></a>
+					<a class="fab fa-facebook-f icon" href="https://ja-jp.facebook.com/"></a>
+					<a class="fab fa-twitter icon" href="https://twitter.com/"></a>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>
