@@ -32,16 +32,18 @@
 				<table class="table">
 					<tbody>
 						<tr>
-							<td width="300">タイトル</td>
-							<td width="300"><%= @post.title %></td>
+							<td>タイトル</td>
+							<td><%= @post.title %></td>
 						</tr>
 						<tr>
-							<td width="300">キャプション</td>
-							<td width="300"><%= @post.caption %></td>
+							<td>キャプション</td>
+							<td><%= @post.caption %></td>
 						</tr>
 						<tr>
-							<td width="300">タグ</td>
-							<td width="300"></td>
+							<td>タグ</td>
+							<% @post.tag_list.each do |tag| %>
+							<td><button class="btn btn-primary"><%= tag %></button></td>
+							<% end %>
 						</tr>
 					</tbody>
 				</table>

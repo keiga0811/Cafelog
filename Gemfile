@@ -72,3 +72,4 @@ group :production do
   gem 'mysql2'
 end
 gem 'kaminari','~> 1.2.1'
+gem 'acts-as-taggable-on', '~> 6.0'

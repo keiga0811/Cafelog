@@ -26,7 +26,7 @@ class PostImagesController < ApplicationController
   def edit
     @post = PostImage.find(params[:id])
     @post.user_id = current_user.id
-    if@post.user_id != current_user
+    if@post.user_id != current_user.id
     redirect_to user_path(current_user)
     end
   end
@@ -45,6 +45,6 @@ class PostImagesController < ApplicationController
 
   private
   def post_image_params
-  	params.require(:post_image).permit(:user_id, :title, :caption, :image)
+  	params.require(:post_image).permit(:user_id, :title, :caption, :image, :tag_list)
   end
 end

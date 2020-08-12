@@ -13,11 +13,15 @@
 						<tbody>
 							<tr>
 								<td>タイトル</td>
-								<td><%= f.text_field :title %></td>
+								<td><%= f.text_field :title, class: "form-control" %></td>
 							</tr>
 							<tr>
 								<td>キャプション</td>
-								<td><%= f.text_area :caption %></td>
+								<td><%= f.text_area :caption, class: "form-control" %></td>
+							</tr>
+							<tr>
+								<td>タグ</td>
+								<td><%= f.text_field :tag_list, value: @post.tag_list.join(','), class: "form-control" %></td>
 							</tr>
 						</tbody>
 					</table>
