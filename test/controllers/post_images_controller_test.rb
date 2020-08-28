@@ -15,5 +15,4 @@ class PostImagesControllerTest < ActionDispatch::IntegrationTest
     get post_images_edit_url
     assert_response :success
   end
-
 end
