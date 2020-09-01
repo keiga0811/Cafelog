@@ -11,6 +11,14 @@
 				<td>introduction</td>
 				<td><%= user.introduction %></td>
 			</tr>
+			<tr>
+				<td>フォロー</td>
+				<td><%= link_to "#{@user.followings.count}人", user_following_path(user.id) %></td>
+			</tr>
+			<tr>
+				<td>フォロワー</td>
+				<td><%= link_to "#{@user.followers.count}人", user_followers_path(user.id) %></td>
+			</tr>
 		</tbody>
 	</table>
 	<%= link_to "#{user.name}の投稿一覧", user_path(user.id), class:"btn btn-info" %><br>

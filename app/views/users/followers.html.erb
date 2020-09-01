@@ -1,0 +1,35 @@
+<div class="wrapper-contents">
+	<div class="container">
+		<div class="row">
+
+			<%= render "users/userinfo", user: @user %>
+
+			<div class="col-lg-9">
+				<table class="table">
+					<thead>
+						<h2>Followers</h2>
+						<tr>
+							<th width="300">Image</th>
+							<th width="300">User_name</th>
+							<th width="300"></th>
+						</tr>
+					</thead>
+					<% @follow.each do |follow| %>
+					<tbody>
+						<tr>
+							<td>
+							<%=link_to user_path(follow.id) do %>
+							<%= attachment_image_tag follow, :profile_image, :size => '50x50', fallback: "noimage.png" %>
+							<% end %>
+							</td>
+							<td><%= follow.name %></td>
+							<td><%= link_to "投稿を見る", user_path(follow.id)%></td>
+							<td><%= render "relationships/follow", user: follow %></td>
+						</tr>
+					</tbody>
+					<% end %>
+				</table>
+			</div>
+		</div>
+	</div>
+</div>

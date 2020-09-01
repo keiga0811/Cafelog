@@ -8,6 +8,7 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet"><!-- fontawesome使用のため -->
+    <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet"><!-- フォント使用のため -->
 
 <!-- topページのリンクにスムーススクロールを実装　-->
     <script>
@@ -29,13 +30,13 @@
     <% if user_signed_in? %>
     <header>
       <div class="navi clearfix">
-        <%= link_to "Cafelog", user_path(current_user.id), class: "logo" %><i class="fas fa-coffee"></i>
+        <%= link_to "Cafelog", user_path(current_user.id), class: "logo" %><i class="fas fa-coffee coffee"></i>
         <nav>
           <ul>
-            <li class="navlist"><%= link_to "新規投稿", new_post_image_path %></li>
-            <li class="navlist"><%= link_to "投稿一覧", post_images_path %></li>
-            <li class="navlist"><%= link_to "ユーザー", users_path %></li>
-            <li class="navlist"><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></li>
+            <li class="navlist"><i class="fas fa-edit"></i><%= link_to "NewPost", new_post_image_path %></li>
+            <li class="navlist"><i class="far fa-images"></i><%= link_to "Posts list", post_images_path %></li>
+            <li class="navlist"><i class="fas fa-users"></i><%= link_to "Users", users_path %></li>
+            <li class="navlist"><i class="fas fa-sign-out-alt"></i><%= link_to "Logout", destroy_user_session_path, method: :delete %></li>
           </ul>
         </nav>
       </div>

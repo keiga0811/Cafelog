@@ -1,27 +1,35 @@
-<div class="container">
-	<div class="row">
-		<%= form_for(@post) do |f| %>
-			<div class="col-lg-offset-1 col-lg-2">
-				<h2>Post image</h2>
-				<img id="img1" style="width:300px;height:300px;" />
-				<%= f.attachment_field :image %>
-			</div>
-			<div class="col-lg-offset-3 col-lg-4">
-				<h2>Post content</h2>
-				<table>
-					<tbody>
-						<tr>
-							<td>タイトル</td>
-							<td><%= f.text_field :title %></td>
-						</tr>
-						<tr>
-							<td>キャプション</td>
-							<td><%= f.text_area :caption %></td>
-						</tr>
-					</tbody>
-				</table>
-				<%= f.submit '投稿' %>
-			</div>
-		<% end %>
+<div class="wrapper-contents">
+	<div class="container">
+		<div class="row">
+			<%= form_for(@post) do |f| %>
+				<div class="col-lg-offset-1 col-lg-2">
+					<h2>Post image</h2>
+					<img id="img1" style="width:300px;height:300px;" />
+					<%= f.attachment_field :image %>
+				</div>
+				<div class="col-lg-offset-3 col-lg-4">
+					<h2>Post content</h2>
+					<table>
+						<tbody>
+							<tr>
+								<td>タイトル</td>
+								<td><%= f.text_field :title, class: "form-control" %></td>
+							</tr>
+							<tr>
+								<td>キャプション</td>
+								<td><%= f.text_area :caption, class: "form-control" %></td>
+							</tr>
+							<tr>
+								<td>タグ</td>
+								<td><%= f.text_field :tag_list, value: @post.tag_list.join(','), class: "form-control" %></td>
+							</tr>
+						</tbody>
+					</table>
+					<div class="submit">
+						<%= f.submit '投稿する', class:"btn btn-primary" %>
+					</div>
+				</div>
+			<% end %>
+		</div>
 	</div>
 </div>
